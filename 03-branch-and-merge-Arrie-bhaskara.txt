@@ -1,0 +1,42 @@
+Questions
+
+Answer the following questions
+
+1    What does git clean do?
+2    What do the -d and -f flags for git clean do?
+3    What git command creates a branch?
+4    What is the difference between a fast-forward and recursive merge?
+5    What git command changes to another branch?
+6    How do you remove modified or deleted files from the working directory?
+7    What git command deletes a branch?
+8    What does the git diff command do?
+9    How do you remove files from the staging area?
+10   How do merge conflicts happen?
+
+-------------------------------------------------------------------------------------
+Answer
+
+1. git-clean is Remove untracked files from the working tree
+2. -d :
+	Normally, when no <path> is specified, git clean will not recurse into untracked directories to avoid 
+	removing too much. Specify -d to have it recurse into such directories as well. If any paths are specified, 
+	-d is irrelevant; all untracked files matching the specified paths (with exceptions for nested git directories mentioned under --force) 
+	will be removed.
+   -f :
+	--force
+    If the Git configuration variable clean. requireForce is not set to false, 
+    git clean will refuse to delete files or directories unless given -f or -i. 
+    Git will refuse to modify untracked nested git repositories (directories with a .git subdirectory) 
+    unless a second -f is given.
+3. git branch <name_branch>
+4. fast-forward ; No new commits on the master, Linear History, Linear History, git rebase
+   Recursive : New commits on the master, Commit 2 parents, Merge commit is created, git merge–no-ff
+5. git checkout <name_branch>
+6. git -clean <name_file>
+7. git branch -d <name_branch>
+8. Show changes between the working tree and the index or a tree, changes between the index and a tree,
+  changes between two trees, changes resulting from a merge, 
+  changes between two blob objects, or changes between two files on disk.
+9. git restore --staged <file>
+10. A merge conflict usually occurs when your current branch and the branch you want 
+   to merge into the current branch have diverged

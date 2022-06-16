@@ -1,0 +1,17 @@
+Answer the following questions
+
+1. What is the difference between git reset and git revert. When would you use one over the other?
+2. What is the difference between git merge and git rebase. When would you use one over the other?
+3. What is the difference between git stash pop and git stash apply. When would you use one over the other?
+
+Answer
+1. git reset is used when we want to unstage a file and bring our changes back to the working directory. 
+git reset can also be used to remove commits from the local repository.
+   git revert git revert is used to remove the commits from the remote repository. 
+Since now our changes are in the working directory, let’s add those changes to the staging area and commit them.
+
+2. Git merge is a command that allows you to merge branches from Git. 
+Git rebase is a command that allows developers to integrate changes from one branch to another. 
+
+3. difference between git stash pop and apply involves the stash history. When a developer uses the git stash apply command, the most recently saved stash overwrites files in the current working tree but leaves the stash history alone. 
+In contrast, the pop command restores files but then deletes the applied stash.
